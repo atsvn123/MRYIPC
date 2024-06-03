@@ -9,3 +9,4 @@ find .theos/_/ -name "*.dylib" -exec cp -a {} ${PWD}/usr/lib/ \;
 cp -a ${PWD}/usr/lib/libmryipc.dylib ${THEOS}/lib/
 cp -a ${PWD}/var/jb/usr/lib/libmryipc.dylib ${THEOS}/lib/iphone/rootless
 cp -a ${PWD}/include/ ${THEOS}/include/
+find $THEOS/sdks -type f -name "*.tbd" -exec sed -i '' 's/platform:              (null)/platform:              ios/g' {} \;
