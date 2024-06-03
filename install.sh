@@ -4,5 +4,6 @@ find .theos/_/ -name "*.dylib" -exec cp -a {} ${PWD}/var/jb/usr/lib/ \;
 mkdir -p ${THEOS}/lib/iphone/rootless/
 cp -a ${PWD}/var/jb/usr/lib/libmryipc.dylib ${THEOS}/lib/iphone/rootless
 cp -a ${PWD}/include/ ${THEOS}/include/
+cp -a ${PWD}/MRYIPCCenter.h ${THEOS}/include/
 find .theos/_/ -name "*.dylib" -exec cp -a {} ${PWD}/usr/lib/ \;
 cp -a ${PWD}/usr/lib/libmryipc.dylib ${THEOS}/lib/
