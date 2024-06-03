@@ -230,9 +230,9 @@ typedef struct MRYIPCMessage
 
 		mach_port_t (^createReplyPort)(void) = ^{
 			kern_return_t kr;
-			if (kr) {};
 			mach_port_t port = MACH_PORT_NULL;
 			kr = mach_port_allocate(mach_task_self(), MACH_PORT_RIGHT_RECEIVE, &port);
+			if (kr) {};
 			kr = mach_port_insert_right(mach_task_self(), port, port, MACH_MSG_TYPE_MAKE_SEND);
 			return port;
 		};
