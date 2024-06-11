@@ -1,3 +1,4 @@
+#import <Foundation/Foundation.h>
 @interface MRYIPCCenter : NSObject
 @property (nonatomic, readonly) NSString* centerName;
 @property (nonatomic, readonly) NSArray<NSString*>* selectors;
